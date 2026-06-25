@@ -1,26 +1,50 @@
+// Loading Animation
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
     setTimeout(() => {
         loader.classList.add('hidden');
-    }, 1000);
+    }, 1500);
 });
 
+// Sticky Navbar & Active Section Highlight
 const navbar = document.getElementById('navbar');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    // Sticky navbar
+    if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
+
+    // Active section highlight
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
 });
 
+// Mobile Hamburger Menu
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const navLinksContainer = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
     const icon = hamburger.querySelector('i');
-    if (navLinks.classList.contains('active')) {
+    if (navLinksContainer.classList.contains('active')) {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-times');
     } else {
@@ -29,15 +53,51 @@ hamburger.addEventListener('click', () => {
     }
 });
 
+// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navLinksContainer.classList.remove('active');
         const icon = hamburger.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
     });
 });
 
+// Typing Effect
+const typingTexts = ['Frontend Developer', 'React Developer', 'UI/UX Developer', 'Web Designer'];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById('typingText');
+
+function typeEffect() {
+    const currentText = typingTexts[textIndex];
+    
+    if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 50 : 100;
+
+    if (!isDeleting && charIndex === currentText.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typingTexts.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+}
+
+typeEffect();
+
+// Skill Progress Bars Animation
 const skillProgress = document.querySelectorAll('.skill-progress');
 const skillsSection = document.getElementById('skills');
 
@@ -56,6 +116,7 @@ const animateSkills = () => {
 
 window.addEventListener('scroll', animateSkills);
 
+// Back to Top Button
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -73,6 +134,7 @@ backToTop.addEventListener('click', () => {
     });
 });
 
+// Contact Form
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -80,24 +142,19 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+const revealOnScroll = () => {
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+            element.classList.add('active');
         }
     });
-}, observerOptions);
+};
 
-const sections = document.querySelectorAll('section');
-sections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // Initial check

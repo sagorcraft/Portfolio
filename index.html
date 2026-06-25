@@ -26,14 +26,14 @@
                 <span>Sagor Roy</span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -44,22 +44,25 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text reveal">
                     <p class="greeting">Hello, I'm</p>
-                    <h1 class="name">Sagor Roy</h1>
-                    <p class="tagline">Frontend Developer | React Developer</p>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Bangladesh</p>
+                    <h1 class="name gradient-text">Sagor Roy</h1>
+                    <p class="tagline">Building Digital Experiences</p>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor"></span>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-user-tie"></i> Hire Me</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download CV</a>
                     </div>
                     <div class="social-links">
                         <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image reveal">
                     <div class="image-wrapper">
                         <img src="Images/sagor-roy.png" alt="Sagor Roy">
                     </div>
@@ -70,27 +73,34 @@
 
     <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>About Me</h2>
+                <p>Get to know me better</p>
                 <div class="underline"></div>
             </div>
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Professional Bio</h3>
-                    <p>I am a passionate Frontend Developer with expertise in building modern, responsive, and user-friendly web applications. With a strong foundation in HTML, CSS, and JavaScript, I specialize in React.js for creating dynamic and interactive user interfaces.</p>
+                <div class="about-text reveal">
+                    <h3>Who I Am</h3>
+                    <p>I'm a passionate <span class="highlight">Frontend Developer</span> with expertise in building modern, responsive, and user-friendly web applications. With a strong foundation in <span class="highlight">HTML, CSS, and JavaScript</span>, I specialize in <span class="highlight">React.js</span> for creating dynamic and interactive user interfaces.</p>
                     <p>My goal is to create seamless digital experiences that combine aesthetic design with robust functionality. I continuously learn and adapt to new technologies to deliver the best solutions for my clients and users.</p>
-                    <h3>Career Objective</h3>
-                    <p>To leverage my skills and knowledge in frontend development to contribute to innovative projects, grow professionally, and make a meaningful impact in the tech industry.</p>
                 </div>
-                <div class="skills-summary">
-                    <h3>Skills Summary</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Modern HTML5 & CSS3</li>
-                        <li><i class="fas fa-check-circle"></i> Vanilla JavaScript & ES6+</li>
-                        <li><i class="fas fa-check-circle"></i> React.js & Component Architecture</li>
-                        <li><i class="fas fa-check-circle"></i> Responsive Web Design</li>
-                        <li><i class="fas fa-check-circle"></i> Git & Version Control</li>
-                    </ul>
+                <div class="skills-summary reveal">
+                    <div class="skill-highlight">
+                        <i class="fas fa-code"></i>
+                        <span>Clean Code</span>
+                    </div>
+                    <div class="skill-highlight">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="skill-highlight">
+                        <i class="fas fa-palette"></i>
+                        <span>Modern UI/UX</span>
+                    </div>
+                    <div class="skill-highlight">
+                        <i class="fas fa-rocket"></i>
+                        <span>Performance Focus</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,16 +108,20 @@
 
     <section id="skills" class="skills">
         <div class="container">
-            <div class="section-header">
-                <h2>Skills</h2>
+            <div class="section-header reveal">
+                <h2>My Skills</h2>
+                <p>Technologies I work with</p>
                 <div class="underline"></div>
             </div>
             <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Frontend</h3>
+                <div class="skills-category reveal">
+                    <h3>Frontend Development</h3>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">HTML5</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-html5"></i>
+                                <span class="skill-name">HTML5</span>
+                            </div>
                             <span class="skill-percent">95%</span>
                         </div>
                         <div class="skill-bar">
@@ -116,7 +130,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">CSS3</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-css3-alt"></i>
+                                <span class="skill-name">CSS3</span>
+                            </div>
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-bar">
@@ -125,7 +142,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-js-square"></i>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-bar">
@@ -134,7 +154,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">React.js</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-react"></i>
+                                <span class="skill-name">React.js</span>
+                            </div>
                             <span class="skill-percent">88%</span>
                         </div>
                         <div class="skill-bar">
@@ -143,7 +166,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Tailwind CSS</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fas fa-wind"></i>
+                                <span class="skill-name">Tailwind CSS</span>
+                            </div>
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-bar">
@@ -152,7 +178,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-bootstrap"></i>
+                                <span class="skill-name">Bootstrap</span>
+                            </div>
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-bar">
@@ -160,11 +189,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Tools</h3>
+                <div class="skills-category reveal">
+                    <h3>Tools & Technologies</h3>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Git</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-git-alt"></i>
+                                <span class="skill-name">Git</span>
+                            </div>
                             <span class="skill-percent">88%</span>
                         </div>
                         <div class="skill-bar">
@@ -173,7 +205,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">GitHub</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-github"></i>
+                                <span class="skill-name">GitHub</span>
+                            </div>
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-bar">
@@ -182,7 +217,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Vite</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fas fa-bolt"></i>
+                                <span class="skill-name">Vite</span>
+                            </div>
                             <span class="skill-percent">82%</span>
                         </div>
                         <div class="skill-bar">
@@ -191,7 +229,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">VS Code</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fas fa-code"></i>
+                                <span class="skill-name">VS Code</span>
+                            </div>
                             <span class="skill-percent">92%</span>
                         </div>
                         <div class="skill-bar">
@@ -200,7 +241,10 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Figma</span>
+                            <div class="skill-name-wrapper">
+                                <i class="fab fa-figma"></i>
+                                <span class="skill-name">Figma</span>
+                            </div>
                             <span class="skill-percent">78%</span>
                         </div>
                         <div class="skill-bar">
@@ -214,14 +258,15 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
-                <h2>Projects</h2>
+            <div class="section-header reveal">
+                <h2>My Projects</h2>
+                <p>Some of my recent works</p>
                 <div class="underline"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-image">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20coffee%20shop%20landing%20page%20design&image_size=landscape_16_9" alt="Coffee Shop">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20coffee%20shop%20landing%20page%20website%20design%2C%20dark%20theme&image_size=landscape_16_9" alt="Coffee Shop">
                     </div>
                     <div class="project-content">
                         <h3>Coffee Shop Landing Page</h3>
@@ -237,13 +282,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-image">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20e-commerce%20website%20eco%20products&image_size=landscape_16_9" alt="EcoBazar">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop" alt="EcoBazar">
                     </div>
                     <div class="project-content">
                         <h3>EcoBazar E-commerce Website</h3>
-                        <p>An e-commerce platform for eco-friendly products with shopping cart functionality.</p>
+                        <p>An e-commerce platform for eco-friendly products with shopping cart functionality and modern UI.</p>
                         <div class="tech-stack">
                             <span>React.js</span>
                             <span>Tailwind CSS</span>
@@ -255,13 +300,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-image">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20travel%20booking%20website%20design&image_size=landscape_16_9" alt="Travel Website">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20travel%20booking%20website%20design%2C%20dark%20theme&image_size=landscape_16_9" alt="Travel Website">
                     </div>
                     <div class="project-content">
                         <h3>Travel Website</h3>
-                        <p>A responsive travel booking website with destination showcases and booking features.</p>
+                        <p>A responsive travel booking website with destination showcases and interactive booking features.</p>
                         <div class="tech-stack">
                             <span>HTML5</span>
                             <span>CSS3</span>
@@ -273,13 +318,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-image">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20developer%20portfolio%20website%20design&image_size=landscape_16_9" alt="Portfolio Website">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20developer%20portfolio%20website%20design%2C%20dark%20theme&image_size=landscape_16_9" alt="Portfolio Website">
                     </div>
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
-                        <p>A personal portfolio website showcasing projects, skills, and contact information.</p>
+                        <p>A personal portfolio website showcasing projects, skills, and contact information with premium design.</p>
                         <div class="tech-stack">
                             <span>React.js</span>
                             <span>Bootstrap</span>
@@ -297,33 +342,34 @@
 
     <section id="services" class="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Services</h2>
+                <p>What I can do for you</p>
                 <div class="underline"></div>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Frontend Development</h3>
                     <p>Building modern, interactive, and scalable web applications using React.js and modern JavaScript.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3>Responsive Web Design</h3>
                     <p>Creating websites that look perfect and function flawlessly on all devices from mobile to desktop.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
                     <h3>Landing Page Design</h3>
                     <p>Designing high-converting landing pages with modern UI/UX and smooth animations.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -336,30 +382,31 @@
 
     <section id="experience" class="experience">
         <div class="container">
-            <div class="section-header">
-                <h2>Experience</h2>
+            <div class="section-header reveal">
+                <h2>Experience & Journey</h2>
+                <p>My professional timeline</p>
                 <div class="underline"></div>
             </div>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-content">
                         <h3>React Developer</h3>
                         <p class="timeline-date">2025 - Present</p>
-                        <p>Building and maintaining React applications with modern best practices.</p>
+                        <p>Building and maintaining React applications with modern best practices and performance optimization.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-content">
                         <h3>Frontend Developer</h3>
                         <p class="timeline-date">2024 - 2025</p>
                         <p>Developing responsive websites and web applications using HTML, CSS, and JavaScript.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-content">
                         <h3>Web Development Learning Journey</h3>
                         <p class="timeline-date">2023 - 2024</p>
-                        <p>Mastering frontend technologies and building various personal projects.</p>
+                        <p>Mastering frontend technologies and building various personal projects to enhance my skills.</p>
                     </div>
                 </div>
             </div>
@@ -368,19 +415,20 @@
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Testimonials</h2>
+                <p>What clients say about me</p>
                 <div class="underline"></div>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="testimonial-text">Sagor did an excellent job on our website. The design is modern, responsive, and the code quality is top-notch.</p>
+                    <p class="testimonial-text">Sagor did an excellent job on our website. The design is modern, responsive, and the code quality is top-notch. Highly recommended!</p>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20male%20avatar&image_size=square" alt="Client">
+                            <img src="https://api.dicebear.com/8.x/avataaars/svg?seed=John" alt="John Doe">
                         </div>
                         <div class="author-info">
                             <h4>John Doe</h4>
@@ -388,14 +436,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="testimonial-text">Great communication and attention to detail. Highly recommend for any frontend development work.</p>
+                    <p class="testimonial-text">Great communication and attention to detail. He understood our requirements perfectly and delivered beyond our expectations.</p>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20female%20avatar&image_size=square" alt="Client">
+                            <img src="https://api.dicebear.com/8.x/avataaars/svg?seed=Jane" alt="Jane Smith">
                         </div>
                         <div class="author-info">
                             <h4>Jane Smith</h4>
@@ -403,14 +451,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card reveal">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="testimonial-text">Professional, timely, and creative. Our website has never looked better!</p>
+                    <p class="testimonial-text">Professional, timely, and creative. Our website has never looked better! The new design has significantly improved user engagement.</p>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20male%20avatar%20glasses&image_size=square" alt="Client">
+                            <img src="https://api.dicebear.com/8.x/avataaars/svg?seed=Mike" alt="Mike Johnson">
                         </div>
                         <div class="author-info">
                             <h4>Mike Johnson</h4>
@@ -424,50 +472,51 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Contact Me</h2>
+                <p>Let's work together</p>
                 <div class="underline"></div>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info reveal">
                     <h3>Get In Touch</h3>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>sagorroy4778@gmail.com</p>
+                            <p>sagor.roy@example.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
                         <div>
                             <h4>GitHub</h4>
-                            <p><a href="https://github.com/sagorcraft" target="_blank">github.com/sagorcraft</a></p>
+                            <p><a href="https://github.com" target="_blank">github.com/sagorroy</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h4>LinkedIn</h4>
-                            <p><a href="https://www.linkedin.com/in/sagorroy007/" target="_blank">linkedin.com/in/sagorroy007</a></p>
+                            <p><a href="https://linkedin.com" target="_blank">linkedin.com/in/sagorroy</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
+                <div class="contact-form-wrapper reveal">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
                     </form>
                 </div>
             </div>
@@ -476,14 +525,14 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content reveal">
                 <div class="footer-social">
                     <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
-                <p>&copy; 2026 Sagor Roy. All rights reserved.</p>
+                <p>&copy; 2026 Sagor Roy. All rights reserved. Designed & Built with ❤️</p>
             </div>
         </div>
     </footer>
