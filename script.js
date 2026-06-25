@@ -1,3 +1,69 @@
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+const cursorDot = document.querySelector('.cursor-dot');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  cursorDot.style.left = e.clientX + 'px';
+  cursorDot.style.top = e.clientY + 'px';
+});
+
+// Add hover effect to interactive elements
+const hoverElements = document.querySelectorAll('a, button, .project-card, .service-card, .skill-highlight, .testimonial-card, .stat-item');
+hoverElements.forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+
+// Animated Counter
+const counters = document.querySelectorAll('.stat-number');
+let countersAnimated = false;
+
+const animateCounters = () => {
+  if (countersAnimated) return;
+  
+  const statsSection = document.querySelector('.stats');
+  const sectionTop = statsSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  
+  if (sectionTop < windowHeight * 0.8) {
+    countersAnimated = true;
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-count'));
+      let current = 0;
+      const increment = target / 100;
+      const duration = 2000; // 2 seconds
+      const stepTime = duration / 100;
+      
+      const updateCounter = () => {
+        if (current < target) {
+          current += increment;
+          counter.textContent = Math.ceil(current);
+          setTimeout(updateCounter, stepTime);
+        } else {
+          counter.textContent = target + '+';
+        }
+      };
+      
+      updateCounter();
+    });
+  }
+};
+
+window.addEventListener('scroll', animateCounters);
+animateCounters(); // Initial check
+
+// Parallax Effect for Hero Image
+const heroImage = document.querySelector('.hero-image .image-wrapper');
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  if (heroImage) {
+    heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+  }
+});
+
 // Loading Animation
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
